@@ -38,6 +38,6 @@ node {
     
     stage('run image') {
         sh 'echo "starting container"'
-        app = docker.run('nik0112/test-devops')
+        sh 'docker run --net=host -d -p 9091:9091 nik0112/test-devops'
     }
 }
