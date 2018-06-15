@@ -10,8 +10,8 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-
-        sh 'sudo docker build -t nik0112/test-devops'
+        sh 'echo "building image"'
+        app = docker.build("nik0112/test-devops")
     }
 
     stage('Test image') {
