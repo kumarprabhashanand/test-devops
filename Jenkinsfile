@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("nik0112/test-devops")
+        sh 'sudo docker build -t nik0112/test-devops'
     }
 
     stage('Test image') {
